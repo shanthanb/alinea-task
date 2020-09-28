@@ -1,0 +1,255 @@
+@import "../../sass/mixins";
+
+.main{
+    min-height: 170vh;
+    background-color: white;
+    flex: 1;
+    position: relative;
+    border: .1rem solid rgb(227, 227, 227);
+    border-radius: 1.25rem;
+    box-shadow: 5px 18px 64px 0 rgba(0,0,0,.1);
+    position: relative;
+    margin-top: 10rem;
+
+    @include respond(tab-port){
+        margin-bottom: 5rem;
+        min-height: 200vh;
+    }
+
+    &_overlay{
+        position: absolute;
+        width: 75%;
+        height: 17.5rem;
+        left: 12.5%;
+        top: 0;
+        z-index: 1;
+        transform: translate(0, -35%);
+
+        @include respond(tab-port){
+            transform: translate(40%, -50%);
+            height: 18.5rem;
+            width: 40%;
+        }
+
+        @include respond(big-phone){
+            width: 80%;
+            height: 17.5rem;
+            transform: translateY(-50%);
+        }
+
+        &_img{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &_header{
+        height: 32%;
+        width: 100%;
+        position: relative;
+        
+        @include respond(tab-port){
+            padding: 10rem 0 3rem 0;
+        }
+
+
+        &_data{
+            bottom: 0;
+            position: absolute;
+            height: 70%;
+            width: 100%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            @include respond(tab-port){
+                position: relative;
+            }
+
+            &_type{
+                text-transform: uppercase;
+                letter-spacing: .55rem;
+                font-size: 1.75rem;
+                font-weight: 600;
+                color: rgb(70, 70, 70);
+            }
+
+            &_interest{
+                margin-bottom: .5rem;
+                font-size: 5.5rem;
+                font-weight: 700;
+            }
+
+            &_cashback{
+                font-weight: 600;
+                font-size: 2rem;
+                padding: .5rem;
+                color: white;
+                margin-right: .5rem;
+                border-radius: .5rem;
+                background-color: rgb(200, 200, 200);
+            
+                &_sub{
+                    margin-left: .5rem;
+                    color: rgb(70, 70, 70);
+                    font-size: 1.75rem;
+                }
+            }
+        }
+    }
+
+    &_spots{
+        border-bottom: .1rem solid rgb(200, 200, 200);
+        padding: 4rem 2rem;
+            
+        &_buttonContainer{
+            margin-top: 3rem;
+            height: 6rem;
+        }
+
+        &_progress{
+            display: flex;
+            flex-direction: column;
+
+            &_data{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+
+                &_first{
+                    margin-bottom: 1rem;
+                    font-weight: 500;
+                    font-size: 1.15rem;
+                    color: rgb(70, 70, 70);
+                }
+
+                &_second{
+                    font-weight: 500;
+                    font-size: 1.15rem;
+                    color: rgb(70, 70, 70);
+                }
+            }
+
+            &_indicator{
+                position: relative;
+                background-color: rgb(200, 200, 200);
+                height: 1rem;
+                width: 100%;
+                border-radius: .5rem;
+            
+                &_green{
+                    position: absolute;
+                    background-color: green;
+                    transition: all .5s ease;
+                    border-radius: .5rem;
+                    left: 0;
+                    top: 0;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    &_includes{
+        padding: 4rem 2rem;
+        display: flex;
+        flex-direction: column;
+
+        &_head{
+            font-size: 1.75rem;
+            text-transform: uppercase;
+            color: rgb(200, 200, 200);
+            font-weight: 500;
+            letter-spacing: .6rem;
+        }
+
+        &_list{
+            display: flex;
+            margin-top: 2rem;
+            flex-direction: column;
+
+            &_item{
+                display: flex;
+                margin-bottom: 2rem;
+                flex-direction: row;
+                font-size: 1.5rem;
+                align-items: center;
+
+                &_text{
+                    font-weight: 600;
+                    margin-left: 2rem;
+                    color: rgb(64, 64, 64);
+                }
+            }
+        }
+
+        &_info{
+            margin-top: 1rem;
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: rgb(100, 100, 100);
+        }
+    }
+
+    &_footer{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+
+        &_icon{
+            height: 2.5rem;
+            width: 2.5rem;
+        }
+
+        &_text{
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-left: 1rem;
+            text-decoration-line: line-through;
+        }
+    }
+
+    &_foot{
+        padding: 1.5rem 4rem;
+        height: 15rem;
+        min-height: 15rem;
+        display: flex;
+        bottom: 0;
+        width: 100%;
+        flex-direction: column;
+        border-radius: 0 0 1rem 1rem;
+        background-color: rgba(0,168,107,.4);
+        position: absolute;
+        
+        &_info{
+            display: flex;
+            margin-top: .25rem;
+            margin-left: 3.5rem;
+            flex-direction: column;
+
+            &_main{
+                font-size: 2.15rem;
+                color: green;
+                font-weight: 600;
+            }
+
+            &_sub{
+                font-size: 1.5rem;
+                color: green;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.special{
+    font-size: 2rem;
+    font-weight: 600;
+    color: green;
+}

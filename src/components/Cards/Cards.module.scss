@@ -1,0 +1,63 @@
+@import "../../sass/mixins";
+@import "../../sass/variables";
+
+.main{
+    margin: 9rem 0;
+
+    &_about{
+        width: 55%;
+        margin: auto;
+        text-align: center;
+
+        @include respond(tab-port){
+            width: 90%;
+        }
+    }
+
+    &_cardHolder{
+        margin-top: 5rem;
+        display: flex;
+        flex-direction: row;
+        padding: 0 4rem;
+
+        @include respond(tab-port){
+            flex-direction: column;
+            padding: 0 1.5rem;
+        }
+    }
+}
+
+.voidVertical{
+    width: 2rem;
+
+    @include respond(tab-port){
+        width: .5rem;
+    }
+}
+
+
+.tray{
+    display: none;
+    flex-direction: row;
+
+    @include respond(tab-port){
+        display: flex;
+        margin-top: 4rem;
+    }
+
+    &_item{
+        flex: 1;
+        cursor: pointer;
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 600;
+        letter-spacing: .5rem;
+        text-transform: uppercase;
+        color: rgb(170, 170, 170);
+    }
+}
+
+.selected{
+    color: $color-primary;
+    text-decoration: underline .2rem solid $color-primary;
+}

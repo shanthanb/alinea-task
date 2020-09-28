@@ -1,0 +1,39 @@
+@import "../../../sass/mixins";
+
+.primary{
+    font-size: 6rem;
+    margin: .5rem 0;
+    font-weight: 800;
+    font-family: "Playfair Display", sans-serif;
+
+    @include respond(tab-port){
+        font-size: 3rem;
+        width: 100%;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+}
+
+.secondary{
+    font-size: 5rem;
+    font-weight: 700;
+    font-family: "Playfair Display", sans-serif;
+    margin: 1.75rem 0;
+
+    @include respond(tab-port){
+        font-size: 2.75rem;
+    }
+}
+
+.tertiary{
+    font-weight: 400;
+    font-size: 2.25rem;
+    color: rgb(118,118,118);
+    
+    @include respond(tab-port){
+        font-size: 1.5rem;
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+}

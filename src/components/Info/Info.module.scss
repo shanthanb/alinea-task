@@ -1,0 +1,62 @@
+@import "../../sass/variables";
+@import "../../sass/mixins";
+
+.main{
+    display: flex;
+    margin-top: 10rem;
+    flex-direction: row;
+    min-height: 50vh;
+    padding: 0 4rem;
+
+    @include respond(tab-port){
+        flex-direction: column-reverse;
+        padding: 0 2rem;
+    }
+
+    &_text{
+        flex: .6;
+        display: flex;
+        flex-direction: column;
+
+        &_subHead{
+            font-weight: 700;
+            font-size: 2.35rem;
+            color: $color-primary;
+
+            @include respond(tab-port){
+                font-size: 2rem;
+                margin-top: 1rem;
+            }
+        }
+
+        &_info{
+            font-size: 1.75rem;
+            color: rgb(122, 122, 122);
+            line-height: 3.1rem;
+            
+            @include respond(tab-port){
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    &_image{
+        flex: .4;
+
+        @include respond(tab-port){
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &_img{
+            height: 100%;
+            width: 100%;
+        
+            @include respond(tab-port){
+                height: 95%;
+                width: 95%;
+            }
+        }
+    }
+}

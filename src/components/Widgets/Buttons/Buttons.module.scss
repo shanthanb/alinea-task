@@ -1,0 +1,34 @@
+@import "../../../sass/variables";
+@import "../../../sass/mixins";
+
+.primary{
+    background-color: $color-primary;
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include respond(tab-port){
+        padding: 0 2rem;
+    }
+}
+
+.secondary{
+    cursor: pointer;
+    color: $color-primary;
+    border: $color-primary .2rem solid;
+    background-color: #ffffff;
+}
+
+.common{
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.5rem;
+}

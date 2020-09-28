@@ -1,0 +1,53 @@
+@import "../../../sass/mixins";
+
+.primary{
+    width: 100%;
+    height: 8.5rem;
+    position: relative;
+
+    @include respond(tab-port){
+        height: 6.5rem;
+    }
+
+    &_label{
+        position: absolute;
+        left: 1.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 100%;
+        padding: 1.5rem 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    &_input{
+        width: 100%;
+        border-radius: 1.75rem;
+        border: .1rem solid rgba(122, 122, 122, .5);
+        height: 100%;
+        padding: 2rem 2rem 2rem 6rem;
+        font-size: 1.6rem;
+        font-family: "Montserrat", sans-serif;
+
+        &::placeholder{
+            color: rgba(122, 122, 122, .5);
+        }
+
+        &:focus{
+            outline: none;
+        }
+    }
+
+    &_child{
+        position: absolute;
+        right: 1.5rem;
+        padding: 1.5rem 0;
+        height: 100%;
+        width: 25%;
+
+        @include respond(tab-port){
+            padding: 1rem 0;
+            right: 1rem;
+        }
+    }
+}

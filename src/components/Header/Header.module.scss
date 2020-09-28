@@ -1,0 +1,144 @@
+@import "../../sass/mixins";
+
+.main{
+    width: 100%;
+    height: 12.5%;
+    min-height: 12.5vh;
+    position: relative;
+    background-color: white;
+    padding: 0rem 2rem;
+    box-shadow: rgba(#222, 0.12) 0px 5px 4px;
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    flex-direction: row;
+
+    @include respond(tab-port){
+        padding: 0 2rem;
+        min-height: 10vh;
+        height: 10vh;
+    }
+
+    &_partA{
+        flex: .6;
+        display: flex;
+        flex-direction: row;
+
+        @include respond(tab-port){
+            height: 100%;
+        }
+
+        &_logo{
+            height: 65%;
+            display: flex;
+            width: 40%;
+            margin: auto;
+            justify-content: space-between;
+            align-items: center;
+
+            &_img{
+                height: 70%;
+
+                @include respond(tab-port){
+                    height: 100%;
+                }    
+            }
+
+            @include respond(tab-port){
+                height: 45%;
+                width: 40%;
+            }       
+        }
+
+        &_options{
+            width: 70%;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: row;
+            align-items: center;
+
+            &_choice{
+                font-size: 1.5rem;
+                display: flex;
+                align-items: center;
+                font-weight: 600;
+                margin-right: 2rem;
+                cursor: pointer;
+                color: rgba(118,118,118,1);
+
+                &:hover{
+                    color: rgba(71,71,71,1);
+
+                }
+
+                &:nth-child(1){
+                    color: rgba(255,102,255,1);
+                }
+
+                @include respond(tab-port){
+                    text-align: left;
+                    width: 100%;
+                    margin-left: 5rem;
+                    padding: 1.75rem;
+                }
+            }
+
+            @include respond(tab-port){
+                flex-direction: column;
+                position: absolute;
+                top: 10vh;
+                width: 100%;
+                left: 0;
+                height: 100vh;
+                background-color: white;
+            }
+        }
+    }
+
+    &_partB{
+        flex: .4;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        &_container{
+            margin-right: 2rem;
+            width: 12rem;
+            height: 65%;
+            display: flex;
+            justify-content: center;
+
+            @include respond(tab-port){
+                width: 80%;
+                height: 6rem;
+                margin: 0 auto 2rem auto;
+            }
+
+        }
+
+        @include respond(tab-port){
+            flex-direction: column;
+            bottom: 0;
+            width: 100%;
+            margin-top: 2rem;
+        }
+    }
+}
+
+.ham{
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+
+    @include respond(tab-port){
+        display: flex;
+    }
+}
